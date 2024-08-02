@@ -1,9 +1,10 @@
-name: Deploy to Simply.com
+name: Build and Deploy React App
 
 on:
   push:
     branches:
-      - main  # Deploy when changes are pushed to the main branch
+      - main  # Trigger the workflow on pushes to the main branch
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,16 +14,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v1
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        dotnet-version: '6.0.x'  # Adjust to your project's .NET version
+        node-version: '18'  # Adjust to the Node.js version your project uses
+
+    - name: Install dependencies
+      run: npm install
 
     - name: Build
-      run: dotnet build --configuration Release
-
-    - name: Publish
-      run: dotnet publish --configuration Release --output ./publish
+      run: npm run build  # This command assumes your build script is "build"
 
     - name: Deploy to Simply.com
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -30,5 +31,6 @@ jobs:
         ftp-server: ${{ secrets.FTP_ADDRESS }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./publish
-        server-dir: /public_html/
+        local-dir: ./dist  # The directory where Vite outputs the build files
+        server-dir: /public_html/  # Adjust to your server path
+
