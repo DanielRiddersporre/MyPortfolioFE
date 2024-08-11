@@ -1,6 +1,14 @@
 .body {
-    padding: 2rem;
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+}
+
+.DESKTOP-MENU{
+    width: 100%;
+    justify-content: center;
+}
+
+.MOBILE-MENU{
+    width: 87vw;
+    justify-content: center;
 }
