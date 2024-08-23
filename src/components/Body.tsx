@@ -1,5 +1,4 @@
 import "../styles/Body.css"
-import imgUrl from "../assets/hero_dr.jpg"
 
 export default function Body() {
     return(
