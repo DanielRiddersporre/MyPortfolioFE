@@ -5,17 +5,17 @@ export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     return (
         <>
-            <div className="flex justify-between py-8">
+            <div className="flex py-8">
                 <nav>
-                    <section className="MOBILE-MENU flex direction-row justify-between items-center py-2 lg:hidden">
+                    <section className="MOBILE-MENU flex direction-row justify-between px-8 items-center lg:hidden">
                         <div
-                            className="HAMBURGER-ICON space-y-2" onClick={() => setIsNavOpen((prev) => !prev)}>
+                            className={isNavOpen ? "hidden" : "HAMBURGER-ICON space-y-2"} onClick={() => setIsNavOpen((prev) => !prev)}>
                             <span className="block h-0.5 w-8 animate-pulse bg-orange-600"></span>
                             <span className="block h-0.5 w-8 animate-pulse bg-orange-600"></span>
                             <span className="block h-0.5 w-8 animate-pulse bg-orange-600"></span>
                         </div>
-                        <div className="flex direction-row px-8 text-lg">
-                            <p className="text-white font-medium">DANIEL</p><p className="text-orange-600 font-medium">RIDDERSPORRE</p>
+                        <div className={isNavOpen ? "hidden transition" : "flex direction-row text-lg"}>
+                            <span className="text-white font-medium">DANIEL</span><span className="text-orange-600 font-medium">RIDDERSPORRE</span>
                         </div>
                         <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
                             <div
@@ -54,7 +54,7 @@ export default function Header() {
                             </ul>
                         </div>
                     </section>
-                    <section className="DESKTOP-MENU hidden lg:flex space-x-10">
+                    <section className="DESKTOP-MENU hidden md:flex space-x-10">
                         <a className="flex direction-row"><h2 className="text-white">DANIEL</h2><h2 className="text-orange-600">RIDDERSPORRE</h2></a>
                         <ul className="space-x-10 lg:flex">
                             <li className="uppercase">
@@ -64,7 +64,7 @@ export default function Header() {
                                 <a href="/blog" className="text-white">Blogg</a>
                             </li>
                             <li className="uppercase">
-                                <a href="/About" className="text-white">Om</a>
+                                <a href="/about" className="text-white">Om</a>
                             </li>
                             <li className="uppercase">
                                 <a href="/contact" className="text-white">Kontakt</a>
@@ -83,7 +83,7 @@ export default function Header() {
                         height: 100vh;
                         top: 0;
                         left: 0;
-                        background: rgba(36,36,36,255);
+                        background: rgba(36,36,36,0.95);
                         z-index: 10;
                         display: flex;
                         flex-direction: column;

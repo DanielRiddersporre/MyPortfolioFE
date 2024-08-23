@@ -5,8 +5,12 @@ import './App.css'
 function App() {
   return (
     <>
-      <Header />
-      <Body />
+      <div className="header sticky top-0 z-5 ">
+        <Header />
+      </div>
+      <div className="body z-0">
+        <Body />
+      </div>
     </>
   )
 }
