@@ -9,24 +9,23 @@ function LandingPage() {
         <div className="relative h-screen overflow-hidden flex flex-col">
             <div className="relative flex-1 overflow-hidden">
                 <Link to="/lina" className="block h-full">
-                    <img src={firstImage} alt="Your Name" className="w-full h-full object-cover" />
+                    <div className="absolute w-full sm:text-base md:text-xl lg:text-3xl p-2 text-white font-bold bg-gradient-to-r from-black to-transparent">
+                        Lina
+                    </div>
+                    <img src={firstImage} alt="Image of Lina" className="w-full h-full object-cover" />
                 </Link>
             </div>
             <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10">
-                <div className="relative w-full h-[10vh] md:h-[15vh] lg:h-[20vh]">
-                    <div className="absolute p-4 top-0 left-0 w-full h-full bg-black transform -skew-y-6">
-                        <div className="absolute top-2 left-3 text-white bg-black font-bold"> {/* Add skew to make text straight: skew-y-6 */}
-                            Lina
-                        </div>
-                        <div className="absolute bottom-2 right-3 text-white bg-black font-bold"> {/* Add skew to make text straight: skew-y-6 */}
-                            Daniel
-                        </div>
-                    </div>
+                <div className="relative w-full h-[5vh]">
+                    <div className="absolute p-4 top-0 left-0 w-full h-full bg-white text-black text-center font-bold"></div>{/* Insert Text to put in the divider if needed */}
                 </div>
             </div>
             <div className="relative flex-1 overflow-hidden">
                 <Link to="/daniel" className="block h-full">
-                    <img src={secondImage} alt="Wife's Name" className="w-full h-full object-cover" />
+                    <div className="absolute w-full sm:text-base md:text-xl lg:text-3xl bottom-0 right-0 p-2 text-white font-bold bg-gradient-to-l from-black to-transparent text-right">
+                        Daniel
+                    </div>
+                    <img src={secondImage} alt="Image of Daniel" className="w-full h-full object-cover" />
                 </Link>
             </div>
         </div>
