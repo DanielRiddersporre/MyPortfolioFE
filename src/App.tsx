@@ -1,16 +1,22 @@
-import Header from './components/Header'
-import Body from './components/Body'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LandingPage from './shared/LandingPage'
+import LinaPage from './lina/LinaPage'
+import DanielPage from './daniel/DanielPage'
 
 function App() {
   return (
     <>
-      <div className="header sticky top-0 z-5 ">
-        <Header />
-      </div>
-      <div className="body z-0">
-        <Body />
-      </div>
+      {/* Define routes for the application. For the LandingPage but also for the individual pages */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/lina" element={<LinaPage />} />
+            {/* Routes specific for Linas page goes here */}
+          <Route path="/daniel" element={<DanielPage />} />
+            {/* Routes specific for Daniels page goes here */}
+        </Routes>
+      </Router>
     </>
   )
 }
