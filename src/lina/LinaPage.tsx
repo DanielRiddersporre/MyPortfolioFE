@@ -1,5 +1,4 @@
 import './LinaPage.css';
-// import 'react-dropdown/style.css';
 import NavBar from './NavBar/NavBar';
 import FirstPage from './FirstPage';
 import ProjectPage from './ProjectPage/ProjectPage';
