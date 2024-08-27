@@ -9,7 +9,7 @@ import DanielPage from './daniel/DanielPage'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-    {/* Define routes for the application. For the LandingPage but also for the individual pages */}
+      {/* Define routes for the application. For the LandingPage but also for the individual pages */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/lina" element={<LinaPage />} />
@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         {/* Routes specific for Daniels page goes here */}
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
