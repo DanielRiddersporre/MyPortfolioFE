@@ -1,4 +1,3 @@
-import NavBar from "../NavBar/NavBar";
 import classes from "./AboutPage.module.css"
 
 const AboutPage = () => {
