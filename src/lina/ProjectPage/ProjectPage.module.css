@@ -1,0 +1,22 @@
+.ProjectPage div {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjectPage div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjectPage div h1 {
+    font-size: 50px;
+    padding-top: 5rem;
+}
+
+.ProjectPage div img {
+    border: solid black 1px;
+    width: 60%;
+}

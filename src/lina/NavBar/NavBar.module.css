@@ -1,0 +1,85 @@
+.NavBar {
+    height: 4rem;
+    width: 100vw;
+    position: sticky;
+    bottom: inherit;
+    top: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #ACA9BB;
+    border-bottom: solid 3px hotpink;
+    align-items: center;
+}
+
+
+.NavBar nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavBar nav ul li {
+    margin: 1.5vw;
+    height: 2rem;
+    font-size: 2rem;
+}
+
+.NavBar nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.NavBar nav ul li a:hover {
+    color: #EDEDED;
+}
+
+.NavBar .MobileNavigation {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .NavBar {
+        height: 3rem;
+        width: 100vw;
+        flex-direction: row;
+        opacity: 1;
+    }
+
+    .NavBar .Navigation {
+        display: none;
+    }
+
+    .NavBar .MobileNavigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .NavBar .MobileNavigation .Hamburger {
+        position: absolute;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    .NavBar nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        position: absolute;
+        top: 80px;
+        right: 5%;
+        left: 5%;
+        height: 90vh;
+        border-top: 2px solid black;
+        background-color: white;
+
+    }
+
+    .NavBar nav ul li {
+        margin: 4rem;
+    }
+
+}
