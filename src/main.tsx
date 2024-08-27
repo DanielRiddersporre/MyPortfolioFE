@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* Define routes for the application. For the LandingPage but also for the individual pages */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/lina" element={<LinaPage />} />
+        <Route path="./lina" element={<LinaPage />} />
         {/* Routes specific for Linas page goes here */}
         <Route path="/daniel" element={<DanielPage />} />
         {/* Routes specific for Daniels page goes here */}
