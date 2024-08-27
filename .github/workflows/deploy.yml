@@ -3,7 +3,7 @@ name: Build and Deploy React App
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
+      - main
   workflow_dispatch:
 
 jobs:
@@ -17,13 +17,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Adjust to the Node.js version your project uses
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
 
     - name: Build
-      run: npm run build  # This command assumes your build script is "build"
+      run: npm run build
+
+    - name: List files in dist directory
+      run: ls -la ./dist/  # Check contents of dist directory
 
     - name: Deploy to Simply.com
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
