@@ -1,0 +1,24 @@
+.AboutPage div {
+    height: auto;
+    max-width: 100%;
+    background-color: #c2c1c7;
+    padding-bottom: 40vh;
+    min-height: 100vh;
+}
+
+.AboutPage div h1 {
+    padding: 15vh 0 0 2rem;
+}
+
+.AboutPage div h2,
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.AboutPage div p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    padding: 0 2rem .5rem 2rem;
+    max-width: 50rem;
+}
