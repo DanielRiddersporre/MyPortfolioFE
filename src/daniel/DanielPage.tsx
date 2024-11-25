@@ -36,7 +36,7 @@ const DanielPage: React.FC = () => {
   }, []);
 
   const percentage = donationData
-    ? Math.min((15000 / donationData.goal_amount) * 100, 100)
+    ? Math.min((donationData.total_amount / donationData.goal_amount) * 100, 100)
     : 0;
 
   return (
