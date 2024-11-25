@@ -9,7 +9,7 @@ const DanielPage: React.FC = () => {
   const [donationData, setDonationData] = useState<DonationData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const API_URL = "http://81.230.165.244:5000/api/donations";
+  const API_URL = "https://api.riddersporre.se/api/donations";
 
   useEffect(() => {
     const fetchData = async () => {
