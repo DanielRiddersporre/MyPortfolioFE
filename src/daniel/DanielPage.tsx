@@ -36,12 +36,13 @@ const DanielPage: React.FC = () => {
   }, []);
 
   const percentage = donationData
-    ? Math.min((donationData.total_amount / donationData.goal_amount) * 100, 100)
+    ? Math.min((15000 / donationData.goal_amount) * 100, 100)
     : 0;
 
   return (
     <div
       style={{
+        backgroundColor: "#180d1b",
         width: "100%",
         textAlign: "center",
         padding: "20px",
@@ -71,7 +72,7 @@ const DanielPage: React.FC = () => {
             <div
               style={{
                 width: `${percentage}%`,
-                backgroundColor: "green",
+                backgroundColor: "#01ad91",
                 height: "100%",
                 transition: "width 0.5s ease",
               }}
