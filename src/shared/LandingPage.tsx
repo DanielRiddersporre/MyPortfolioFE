@@ -5,13 +5,14 @@ import imageDaniel from '../assets/landing-d-hero.jpg'
 function LandingPage() {
   return (
     <>
-        <div className="flex flex-row h-screen justify-center items-center">
-            <div className="overflow-hidden flex flex-row w-max">
-                <div className="flex-row">
-                    <LinkContainer firstName="Daniel" lastName="Riddersporre" imagePath={imageDaniel} linkPath="/daniel"/>
-                </div>
-            </div>
+      <div className="flex flex-row h-screen w-screen justify-center items-center relative overflow-hidden">
+        {/* Main content */}
+        <div className="overflow-hidden flex flex-row w-max relative z-10">
+          <div className="flex-row">
+            <LinkContainer firstName="Daniel" lastName="Riddersporre" imagePath={imageDaniel} linkPath="/daniel-landing" />
+          </div>
         </div>
+      </div>
     </>
   )
 }
