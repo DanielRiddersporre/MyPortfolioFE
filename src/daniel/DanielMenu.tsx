@@ -13,12 +13,12 @@ function DanielMenu() {
               <span className='text-4xl text-orange-600'>|</span>
             </div>
           </Link>
-          <div className="flex-grow">
+          <nav className="flex-grow">
             <Link to={"/daniel-projects"} className="ml-5 text-white hover:text-orange-600">Projects</Link>
             <Link to={"/daniel-blog"} className="ml-5 text-white hover:text-orange-600">Blog</Link>
             <Link to={"/daniel-about"} className="ml-5 text-white hover:text-orange-600">About</Link>
             <Link to={"/daniel-contact"} className="ml-5 text-white hover:text-orange-600">Contact</Link>
-          </div>
+          </nav>
         </div>
       </div>
     </>
